@@ -1,4 +1,5 @@
 # Summary
+Approached in TDD manner. Added enzyme for testing. Did not spend much time styling the component as just wanted to make sure can show/hide email as per acceptance criteria.
 
 ## How would you achieve this with Redux?
 Setup the store, add async action to fetch the messages and then set it to store. Use `mapStateToProps` to bind it to component. Also setup redux dev tools.

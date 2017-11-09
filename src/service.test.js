@@ -52,9 +52,8 @@ getMessages.mockReturnValue(Promise.resolve([
 
 import getChatLog from './service';
 
-it('returns the correct format back in the right order sorted by time', () => {
-  return getChatLog().then((result) => {
-    expect(result).toEqual([
+it('returns the correct format back in the right order sorted by time', async () =>
+  expect(await getChatLog()).toEqual([
       {
         "messageId": "555f4e1b-90a6-4079-850d-54001f29ce44",
         "userId": "c980934a-f54e-459e-8137-0ec3654cdafb",
@@ -82,8 +81,7 @@ it('returns the correct format back in the right order sorted by time', () => {
         "message": "Vestibulum quam sapien, varius ut, blandit non, interdum in, ante.",
         "avatar": null
       }
-    ]);
-  });
-});
+    ])
+);
 
 

@@ -1,9 +1,13 @@
 import React from 'react';
 
-const Message = ({ avatar }) => {
+const Message = ({ avatar, email, timestamp, message, fullName }) => {
   return (
-      <div>
-        {avatar ? <img src={avatar} /> : ''}
+      <div className="message">
+        <div className="message-avatar">{avatar ? <img src={avatar} /> : ''}</div>
+        <div className="message-timestamp">{ timestamp }</div>
+        <div className="message-email">{ email }</div>
+        <div className="message-name">{ fullName }</div>
+        <div className="message-text">{ message }</div>
       </div>
   );
 };

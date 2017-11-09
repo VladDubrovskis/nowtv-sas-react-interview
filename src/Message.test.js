@@ -19,10 +19,12 @@ describe('Message', () => {
 
   it('renders the expected output', () => {
     const wrapper = shallow(<Message {...defaultProps} />);
+
     expect(wrapper.find('img')).toHaveLength(1);
-    expect(wrapper).toContain(defaultProps.fullName);
-    expect(wrapper).toContain(defaultProps.timestamp);
-    expect(wrapper).toContain(defaultProps.email);
+    expect(wrapper.find('.message-timestamp').props().children).toContain(defaultProps.timestamp);
+    expect(wrapper.find('.message-email').props().children).toContain(defaultProps.email);
+    expect(wrapper.find('.message-name').props().children).toContain(defaultProps.fullName);
+    expect(wrapper.find('.message-text').props().children).toContain(defaultProps.message);
   });
 
   it('renders avatar when avatar is a string', () => {

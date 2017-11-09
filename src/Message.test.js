@@ -41,7 +41,7 @@ describe('Message', () => {
 
   it('call the dateFormatter', () => {
     const testDate = '2016-02-03T04:05:06Z';
-    const wrapper = shallow(<Message {...defaultProps} timestamp={testDate} />);
+    shallow(<Message {...defaultProps} timestamp={testDate} />);
     expect(dateFormatter).toHaveBeenCalledWith(testDate);
   });
 

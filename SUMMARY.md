@@ -24,4 +24,4 @@ etc...
 
 
 ## Finally, what did you think of the test? 😀
-- INteresting to have a go at React with Redux, apart from that confusing why each team or even different parts of sub team have different tests :)
+- Interesting to have a go at React with Redux, apart from that confusing why each team or even different parts of sub team have different tests :)

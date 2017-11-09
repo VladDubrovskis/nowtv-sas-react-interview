@@ -1,8 +1,10 @@
 import React from 'react';
 
-const Message = () => {
+const Message = ({ avatar }) => {
   return (
-      <p>Hello world</p>
+      <div>
+        {avatar ? <img src={avatar} /> : ''}
+      </div>
   );
 };
 

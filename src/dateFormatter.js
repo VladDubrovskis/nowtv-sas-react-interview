@@ -1,1 +1,1 @@
-export default (timestamp) => timestamp;
+export default (timestamp) => new Date(timestamp).toLocaleString('en-GB');

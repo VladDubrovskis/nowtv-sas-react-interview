@@ -56,7 +56,7 @@ it('returns the correct format back in the right order sorted by time', async ()
     }
   ]));
 
-  expect(await getChatLog()).toEqual([
+  return expect(await getChatLog()).toEqual([
     {
       "messageId": "555f4e1b-90a6-4079-850d-54001f29ce44",
       "userId": "c980934a-f54e-459e-8137-0ec3654cdafb",
@@ -91,7 +91,7 @@ it('returns empty array if something goes wrong', async () => {
     getMessages.mockImplementationOnce(() => {
       throw new Error('ooops');
     });
-    expect(await getChatLog()).rejects.toEqual([]);
+    return expect(await getChatLog()).toEqual([]);
 });
 
 

@@ -2,11 +2,17 @@ import React, { Component } from 'react';
 import './App.css';
 
 class App extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {messages: []};
+  }
+
   render() {
     return (
-      <h1>
-        Hello Robin!
-      </h1>
+      <div>
+        <h1>Messages</h1>
+        { this.state.messages.length ? <p>Messages</p> : <p>No messages to display</p> }
+      </div>
     );
   }
 }

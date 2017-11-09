@@ -2,8 +2,10 @@ import { getMessages, getMembers } from './data';
 
 export default async function getChatLog() {
   try {
-    const messages = await getMessages();
-    const members = await getMembers();
+    const [messages, members] = await Promise.all([
+      getMessages(),
+      getMembers()
+    ]);
 
     return Promise.resolve(
       messages

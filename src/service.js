@@ -26,7 +26,6 @@ export default async function getChatLog() {
     );
   } catch (e) {
     // could use some sort of logger - for now thought we just want to know smth bad happened;
-    console.log(e);
     return Promise.resolve([]);
   }
 

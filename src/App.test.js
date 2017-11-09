@@ -1,6 +1,7 @@
 import React from 'react';
 import { shallow } from 'enzyme';
 import App from './App';
+import Message from './Message';
 
 describe(('App'), () => {
 
@@ -15,7 +16,7 @@ describe(('App'), () => {
 
   it('renders messages when there are messages', () => {
     const wrapper = shallow(<App />);
-    wrapper.setState({messages: [{message1: true}]});
-    expect(wrapper.update().find('p').props().children).toContain('Messages');
+    wrapper.setState({messages: [{id: 1}, {id: 2}]});
+    expect(wrapper.update().find(Message)).toHaveLength(2);
   });
 });

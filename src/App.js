@@ -1,10 +1,16 @@
 import React, { Component } from 'react';
 import './App.css';
+import getChatLog from './service';
 
 class App extends Component {
   constructor(props) {
     super(props);
     this.state = {messages: []};
+  }
+
+  async componentDidMount() {
+    const messages = await getChatLog();
+    this.setState({ messages });
   }
 
   render() {

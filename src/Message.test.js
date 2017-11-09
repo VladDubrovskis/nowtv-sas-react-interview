@@ -11,4 +11,9 @@ describe('Message', () => {
     const wrapper = shallow(<Message avatar={"http://test"} />);
     expect(wrapper.find('img')).toHaveLength(1);
   });
+
+  it('does not render avatar when it is null', () => {
+    const wrapper = shallow(<Message avatar={null} />);
+    expect(wrapper.find('img')).toHaveLength(0);
+  });
 });

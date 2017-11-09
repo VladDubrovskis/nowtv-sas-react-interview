@@ -74,7 +74,7 @@ it('returns the correct format back in the right order sorted by time', () => {
         "avatar": null
       },
       {
-        "messageId": "12356",
+        "messageId": "555f4e1b-90a6-4079-850d-54001f29ce44",
         "userId": "c980934a-f54e-459e-8137-0ec3654cdafb",
         "fullName": "Aaron Williams",
         "timestamp": "2016-02-26T10:05:17Z",
